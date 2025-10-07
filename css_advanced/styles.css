@@ -1,0 +1,481 @@
+/* RESET (optional but recommended) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER NAVIGATION */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    /* translucent background (optional) */
+    padding: 20px 50px;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+hnav img {
+    height: 40px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    /* distributes links evenly */
+    align-items: center;
+    flex: 1;
+    /* makes ul expand to fill available space */
+    margin-left: 50px;
+    /* small gap from logo */
+    list-style: none;
+}
+
+nav ul li {
+    flex: 1;
+    text-align: center;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #9dd1ff;
+}
+/* HERO SECTION */
+.hero {
+    position: relative;
+    background-image: url("./asset/Object.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 150px 20px 100px;
+    min-height: 100vh;
+}
+
+/* Overlay for better text contrast */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 0;
+}
+
+.hero-content,
+.pro-section {
+    position: relative;
+    z-index: 1;
+}
+
+/* Hero text */
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-content span {
+    margin: 0 10px;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.register-btn {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #9dd1ff;
+    color: black;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.register-btn:hover {
+    background: green;
+    transform: translateY(-2px);
+}
+
+/* PRO SECTION */
+.pro-section {
+    margin-top: 80px;
+}
+
+.pro-section h2 {
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+.pro-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.pro-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    width: 200px;
+    border-radius: 15px;
+    backdrop-filter: blur(6px);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.pro-card:hover {
+    transform: translateY(-6px);
+}
+
+.pro-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #9dd1ff;
+}
+
+.pro-card h3 {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.pro-card p {
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+
+
+/*Testimonial*/
+.testimonial-section {
+    background-color: violet;
+    /* same as upper section background */
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 80px;
+    border-radius: 0;
+    /* no rounding */
+    margin-top: 0;
+    gap: 40px;
+}
+
+.testimonial-section img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+}
+
+.testimonial-section blockquote {
+    font-style: italic;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.testimonial-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.testimonial-section p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Responsive layout for mobile */
+@media (max-width: 700px) {
+    .testimonial-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .testimonial-section img {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+.popular-tutorials {
+    background-color: #f8f8f8;
+    /* off-white background */
+    padding: 60px 80px;
+    text-align: center;
+}
+
+.popular-tutorials h2 {
+    color: #4b0082;
+    /* purple tone */
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.tutorials-grid {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.tutorial-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 260px;
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.tutorial-card:hover {
+    transform: translateY(-8px);
+}
+
+.video-thumb {
+    position: relative;
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.video-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(75, 0, 130, 0.8);
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tutorial-card h3 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+.tutorial-card p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.author img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.author h4 {
+    font-size: 0.9rem;
+    color: #4b0082;
+}
+
+.rating {
+    color: gold;
+    margin: 10px 0;
+}
+
+.duration {
+    font-size: 0.85rem;
+    color: #777;
+}
+
+
+/* free memership*/
+.free-membership {
+    background-color:#301934;
+    /* rich purple */
+    color: white;
+    text-align: center;
+    padding: 60px 40px;
+}
+
+.free-membership h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.membership-grid {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+
+.membership-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.membership-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.membership-card p {
+    font-size: 0.95rem;
+    color: #f1f1f1;
+    line-height: 1.4;
+}
+
+.register-btn {
+    background-color: white;
+    color: #4b0082;
+    border: none;
+    padding: 14px 36px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/*Faq*/
+.faq {
+    background-color: white;
+    padding: 80px 60px;
+    text-align: center;
+}
+
+.faq h2 {
+    font-size: 2rem;
+    color: #301934;
+    /* same purple as other sections */
+    margin-bottom: 50px;
+}
+
+.faq-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.faq-column {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    text-align: left;
+}
+
+.faq-item {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.faq-item h3 {
+    color: #4b0082;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    color: #333;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.footer-box {
+    background-color: #301934;
+    /* dark purple */
+    color: white;
+    padding: 40px 80px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 100px;
+    height: auto;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-icons i {
+    font-size: 24px;
+    color: white;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.footer-icons i:hover {
+    color: #ffccff;
+    /* soft pink hover */
+}
+
+.footer-box p {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #ddd;
+}

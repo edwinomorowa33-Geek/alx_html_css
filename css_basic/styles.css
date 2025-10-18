@@ -22,3 +22,48 @@ aside {
     flex: 1;
     overflow-y: auto;
 }
+
+/* Give the whole page a subtle background color */
+body {
+    background: #fdfdfd;
+    color: #333;
+}
+
+/* Style links */
+a {
+    color: #0056b3;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff4500;
+}
+
+/* Style article text */
+article p {
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Give article a background and border */
+article {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+/* Style aside box */
+aside {
+    background: #f7f9fc;
+    border-left: 4px solid #0056b3;
+}
+
+/* Make footer subtle */
+footer {
+    background: #fafafa;
+    border-top: 1px solid #ddd;
+    font-size: 14px;
+    text-align: center;
+    color: #666;
+}
